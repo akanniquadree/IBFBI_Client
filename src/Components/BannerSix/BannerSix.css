@@ -1,0 +1,47 @@
+.bannerSixCont{
+    height: 500px;
+    /* background-color: #E8E6E3; */
+    position: relative;
+}
+.bannerSixWrap{
+    background-image: url(../../../public/Images/bg-3.jpg);
+    height: calc(500px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bannerSixWrap::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Faint black overlay */
+    z-index: 1;
+  }
+  .bannerSixHeight{
+    height: 500px;
+  }
+
+
+  @media (max-width: 768px) {
+    .bannerSixCont{
+        height: 700px;
+    }
+    .bannerSixWrap{
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bannerSixHeight{
+        height: auto;
+        top: 7%;
+      }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    
+
+}

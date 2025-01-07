@@ -1,0 +1,70 @@
+.BannerSevenCont{
+margin-top: 70px;
+cursor: pointer;
+}
+.BannerSevenImage{
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+.BannerSevenImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.BannerSevenImageDesc{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    bottom: 0;
+    left: 0;
+}
+.BannerSevenImageTitle{
+    background-color: white;
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BannerSevenImageTitleDesc{
+    background-color: red;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BannerSevenList{
+    flex: 1 1 calc(30%);
+    margin-bottom: 20px;
+}
+.read-more {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    font-size: 12px;
+    color: #333;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .read-more:hover {
+    transition: all 0.3s ease;
+    margin-left: 10px; /* Change text color on hover */
+  }
+  
+  .read-more .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease, margin-left 0.3s ease, margin-right 0.3s ease;
+  }
+  
+  .read-more:hover .arrow {
+    transform: rotate(180deg); /* Rotate the arrow to point left */
+    margin-left: 5px; /* Add spacing to the left */
+    margin-right: 0; /* Remove spacing to the right */
+  }

@@ -1,0 +1,18 @@
+.imagesListCont{
+    padding: 30px;
+    background-color: #E8E6E3;
+}
+
+
+.imageListitem{
+    cursor: pointer;
+}
+
+.paginationCont{
+    width: 100%;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row-end: span 8;
+}

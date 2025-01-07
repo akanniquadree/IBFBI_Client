@@ -1,0 +1,60 @@
+.directoryCont {
+    height: 300px;
+    background-image: url(../../../public/Images/directory.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.directoryCont::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 56, 80, 0.8);
+    /* Transparent by default */
+    transition: background 0.3s ease;
+    z-index: 1;
+    /* color: #1E2436B0; */
+}
+
+.directoryWrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.directoryLoc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+}
+
+.directoryLink {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.directoryLink:hover{
+    margin-left: 5px;
+    text-decoration: underline;
+    text-decoration-color: red;
+    transition: all 0.5s ease;
+}
+.directoryName{
+    z-index: 2;
+    font-size: 42px;
+    font-weight: 600;
+    color: white;
+    line-height: 1;
+}

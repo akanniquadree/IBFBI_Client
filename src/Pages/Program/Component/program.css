@@ -1,0 +1,89 @@
+.programCont{
+    padding: 30px;
+    background-color: #E8E6E3;
+}
+.programWrap{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.progamImage{
+    height: 300px;
+    width: 40%;
+}
+.progamImage > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.progamDetail{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.progamTile{
+    font-size: 20px;
+    color: red;
+}
+.progamDesc{
+    color: #7b7e86;
+    font-size: 14px;
+    text-align: justify;
+}
+.progamDescObj{
+    color: #7b7e86;
+    font-size: 16px;
+}
+.progamDescObjList{
+    list-style-type: square;
+    gap: 10px;
+    padding: 0 15px;
+}
+.progamDescObjList > li{
+    color: #7b7e86;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+   .progamDetail{
+    width: 100%;
+   }
+   .progamImage{
+    width: 100%;
+    margin-bottom: 30px;
+   }
+
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .progamDetail{
+        width: calc(100%);
+       }
+       .progamImage{
+        width: calc(100%);
+       }
+}

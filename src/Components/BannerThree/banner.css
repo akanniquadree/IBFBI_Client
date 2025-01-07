@@ -1,0 +1,147 @@
+.bannerThreeUpLeft {
+    flex: 1 1 calc(33.33% - 30px);
+}
+
+.bannerThreeArrows{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.bannerThreeArrow{
+    border-radius: 50%;
+    border: 1px #433E3926 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.bannerThreeArrow:hover{
+    background-color: #433E39;
+}
+
+.bannerThreeDown{
+    margin-top: 30px;
+}
+.bannerThreeImage{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bannerThreeImageCont::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Transparent by default */
+    transition: background 0.3s ease; /* Smooth transition */
+  }
+  .slick-list {
+    gap: 25px;
+    display: flex
+;
+}
+  .bannerThreeImageCont:hover::after {
+    background: rgba(0, 0, 0, 0.3); /* Faint black overlay on hover */
+  }
+.bannerThreeImageDesc{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+.bannerThreeImageTitle{
+    font-size: 20px;
+    color: white;
+}
+
+.bannerThreeHelp{
+    color: black;
+    font-size: 17px;
+    text-align: center;
+    padding-bottom: 100px;
+    margin-top: 20px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.bannerThreeHelpDono{
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+}
+.bannerThreeHelpDono:hover{
+    transform: translateY(-5px);
+    transition: all 0.5s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For mobile screens (below 768px) */
+@media (max-width: 768px) {
+    .bannerTwoThreeLeft {
+        flex: 1 1 calc(100% - 30px);
+    }
+    .bannerThreeUpLeft:nth-child(3){
+        display: none
+    }
+}

@@ -1,0 +1,14 @@
+.volunCont {
+    background-color: #E8E6E3;
+    padding: 30px;
+}
+.volunWrap{
+    margin-top: 30px;
+}
+/* .volunImage{
+} */
+.volunImage > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

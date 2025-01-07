@@ -1,0 +1,323 @@
+.AboutSectionOne {
+    background-color: #E8E6E3;
+    padding: 30px;
+}
+
+.AboutSectionOneWrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.AboutSectionOneImg {
+    flex: 1 1 50%;
+    height: 400px;
+}
+
+.AboutSectionOneImg>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.AboutSectionDetail {
+    flex: 1 1 50%;
+    position: relative;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px;
+    background-position: 100% 60px;
+    background-color: rgba(49, 56, 80, 0.8);
+    background-image: url(../../../../../public/Images/bg-overlay-6.png);
+}
+
+.AboutSectionDetail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.8;
+    background-position: 100% 0;
+    background-image: url(../../../../../public/Images/bg-shape-08.png);
+}
+
+.AboutSectionValueCont{
+    width: 100%;
+    margin: 100px 0;
+}
+.AboutSectionValue {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    
+}
+
+.AboutSectionValueList{
+    flex: 1 1 calc(33.33% - 20px);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    background-position: center center;
+    background-repeat: no-repeat;
+   
+}
+.AboutSectionValueList:hover{
+    opacity: 0.9;
+}
+.AboutSectionValueList:hover .AboutSectionValuehidden {
+display: flex;
+transition: all 0.5s ease-in;
+transform: translate(-50%, -50%)
+
+}
+.AboutSectionValueList:hover .AboutCore{
+    transition: all 0.5s ease-in;
+    transform: translate(-3%, 150%)
+    
+}
+.AboutSectionValueList:nth-child(1){
+    background-image: url(../../../../../public/Images/commitment.jpg) !important;
+}
+.AboutSectionValueList:nth-child(2){
+    background-image: url(../../../../../public/Images/compassion.JPG) !important;
+}
+.AboutSectionValueList:nth-child(3){
+    background-image: url(../../../../../public/Images/productivity.jpg) !important;
+}
+.AboutSectionValueList:nth-child(4){
+    background-image: url(../../../../../public/Images/SliderThree.jpg) !important;
+}
+.AboutSectionValueList:nth-child(5){
+    background-image: url(../../../../../public/Images/transparency.jpg) !important;
+}
+.AboutSectionValueList:nth-child(6){
+    background-image: url(../../../../../public/Images/Excellence.jpg) !important;
+}
+
+.AboutSectionValueList:nth-child(1):after{
+    content: '';
+    position: absolute;
+    background-color: #e36955;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.AboutSectionValueList:nth-child(2):after{
+    content: '';
+    position: absolute;
+    background-color: #e9c138;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.AboutSectionValueList:nth-child(3):after{
+    content: '';
+    position: absolute;
+    background-color: #3c81c8;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.AboutSectionValueList:nth-child(4):after{
+    content: '';
+    position: absolute;
+    background-color: #e9c138;
+    
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.AboutSectionValueList:nth-child(5):after{
+    content: '';
+    position: absolute;
+    background-color: #3c81c8;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.AboutSectionValueList:nth-child(6):after{
+    content: '';
+    position: absolute;
+    
+    background-color: #e36955;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.AboutSectionValueListItem{
+    width: 250px;
+    height: 40px;
+    transition: all 0.5s ease-in;
+    /* padding: 10px 20px; */
+    display: flex;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../../../../public/Images/core.svg);
+}
+.AboutSectionValuehidden{
+    position: absolute;
+    width: 100%;
+    gap: 10px;
+    z-index: 2;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%, 150%);
+    flex-direction: column;
+    /* transform: translate(-50%, 0); */
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in;
+
+
+}
+.AboutSectionValuehidden > p{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .AboutSectionOneImg {
+        flex: 1 1 100%;
+    }
+
+    .AboutSectionDetail {
+        flex: 1 1 100%;
+        height: 450px;
+    }
+
+    .AboutSectionDetail::before {
+
+        opacity: 0.5;
+    }
+    .AboutSectionValueList{
+        flex: 1 1 calc(100% - 20px);}
+
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .AboutSectionOneImg {
+        flex: 1 1 100%;
+        height: 500px;
+    }
+
+    .AboutSectionDetail {
+        flex: 1 1 100%;
+        /* height: 500px; */
+    }
+
+    .AboutSectionDetail::before {
+
+        opacity: 0.5;
+    }
+    .AboutSectionValueList{
+        flex: 1 1 calc(50% - 20px);}
+}
