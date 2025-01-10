@@ -13,9 +13,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BannnerThreeData } from "./BannnerThreeData";
+import { Link } from "react-router-dom";
 
 export default function BannerThree() {
-  const sliderRef = useRef(null)
+  const sliderRef = useRef(null);
   const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     height: 10,
     borderRadius: 5,
@@ -45,7 +46,6 @@ export default function BannerThree() {
     // },
     slidesToScroll: 1,
     responsive: [
-      
       {
         breakpoint: 768, // For tablets and smaller screens
         settings: {
@@ -80,14 +80,27 @@ export default function BannerThree() {
               By providing a variety of options to which everyone can contribute
               in accordance with their abilities and means
             </p>
+            <p>
+              We welcome all types of corporate partnership that can facilitate
+              our humanitarian services to under served communities
+            </p>
+            <button class="read-more">
+            <Link to="/volunteers" style={{color: 'black'}}>Read More</Link> <span class="arrow">→</span>
+            </button>
           </div>
           <div className="bannerThreeUpLeft">
             <div className="bannerThreeArrows">
               <div className="bannerThreeArrow">
-                <ArrowBackIos htmlColor="#898581" onClick={()=>sliderRef.current.slickPrev()}  />
+                <ArrowBackIos
+                  htmlColor="#898581"
+                  onClick={() => sliderRef.current.slickPrev()}
+                />
               </div>
               <div className="bannerThreeArrow">
-                <ArrowForwardIos htmlColor="#898581" onClick={()=>sliderRef.current.slickNext()}/>
+                <ArrowForwardIos
+                  htmlColor="#898581"
+                  onClick={() => sliderRef.current.slickNext()}
+                />
               </div>
             </div>
           </div>
@@ -101,7 +114,11 @@ export default function BannerThree() {
           backgroundColor: "#E8E6E3",
         }}
       >
-        <Slider {...settings} style={{ gap: "30px", display: "flex" }} ref={sliderRef}>
+        <Slider
+          {...settings}
+          style={{ gap: "30px", display: "flex" }}
+          ref={sliderRef}
+        >
           {BannnerThreeData.map((itm, idx) => (
             <div index={idx} style={{ width: "auto" }}>
               <div
@@ -118,9 +135,7 @@ export default function BannerThree() {
                   alt="helpOne"
                 />
                 <div className="bannerThreeImageDesc">
-                  <h5 className="bannerThreeImageTitle">
-                    {itm.title}
-                  </h5>
+                  <h5 className="bannerThreeImageTitle">{itm.title}</h5>
                   <BorderLinearProgress variant="determinate" value={50} />
                   <Stack
                     direction={{ xs: "column", sm: "row" }}

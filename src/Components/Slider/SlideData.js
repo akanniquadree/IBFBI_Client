@@ -1,18 +1,26 @@
 export const SliderData = ([
     {
         name: 'Hunger-free community a dream we can achieve!',
-        img:'/Images/SliderOne.jpg'
+        img:'/Images/SliderOne.jpg',
+        title:'About Us',
+        link:'/about'
     },
     {
-        name:'Slide Two',
-        img:'/Images/SliderTwo.jpg'
+        name:'Give them Nourishment Today so they Thrive Tomorrow',
+        img:'/Images/slideTwo.jpeg',
+        title:'Contact us',
+        link:'/contact us'
     },
     {
-        name:'Slide Three',
-        img:'/Images/SliderThree.jpg'
+        name:'Let’s WALK the TALK, Let’s FEED the HUNGRY!',
+        img:'/Images/slideThree.jpeg',
+        title:'Donate Now',
+        link:'/donate'
     },
     {
-        name:'Slide Four',
-        img:'/Images/SliderFour.jpg'
+        name:'VOLUNTEERS are LIFE SAVERS',
+        img:'/Images/slideFour.jpeg',
+        title:'VOlunteer Now',
+        link:'/volunteers'
     }
 ])

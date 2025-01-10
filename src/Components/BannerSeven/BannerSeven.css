@@ -68,3 +68,15 @@ cursor: pointer;
     margin-left: 5px; /* Add spacing to the left */
     margin-right: 0; /* Remove spacing to the right */
   }
+
+  .paraOne{
+    font-size: 15px;
+    display: -webkit-box;           /* Use a flexible box for multi-line ellipsis */
+  -webkit-box-orient: vertical;  /* Set the orientation of the box */
+  overflow: hidden;              /* Hide overflowing content */
+  text-overflow: ellipsis;       /* Add ellipsis (...) */
+  -webkit-line-clamp: 3;         /* Limit to 3 lines */
+  line-height: 1.5;              /* Adjust line height */
+  max-height: calc(1.5em * 3);   /* Set max height to match 3 lines */
+  width: 100%;   
+  }

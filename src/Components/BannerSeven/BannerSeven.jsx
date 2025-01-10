@@ -1,6 +1,8 @@
 import React from "react";
 import "./BannerSeven.css";
-import { Stack } from "@mui/material";
+import { Button, Stack } from "@mui/material";
+import { BannerSevenData } from "./BannerSevenData";
+import { Link } from "react-router-dom";
 
 export default function BannerSeven() {
   return (
@@ -32,28 +34,41 @@ export default function BannerSeven() {
           sx={{ flexWrap: "wrap" }}
           className="BannerSevenCont"
         >
-          <Stack direction={"column"} spacing={3} className="BannerSevenList">
-            <div className="BannerSevenImage">
-              <img src="/Images/blog-2.jpg" alt="" className="BannerSevenImg" />
-              <div className="BannerSevenImageDesc">
-                <div className="BannerSevenImageTitle">
-                  <p style={{ fontSize: "11px", color: "red" }}>4 years ago</p>
-                </div>
-                <div className="BannerSevenImageTitleDesc">
-                  <p style={{ fontSize: "11px", color: "white" }}>Blog</p>
+          {BannerSevenData.map((item, index) => (
+            <Stack
+              direction={"column"}
+              spacing={3}
+              className="BannerSevenList"
+              key={index}
+            >
+              <div className="BannerSevenImage">
+                <img src={item.img} alt="" className="BannerSevenImg" />
+                <div className="BannerSevenImageDesc">
+                  <div className="BannerSevenImageTitle">
+                    <p style={{ fontSize: "11px", color: "red" }}>
+                      4 years ago
+                    </p>
+                  </div>
+                  <div className="BannerSevenImageTitleDesc">
+                    <p style={{ fontSize: "11px", color: "white" }}>Blog</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <h5>Meet George, our education hero.</h5>
-            <p>
-              I think that you should be able to select more than one reason for
-              rating.
-            </p>
-            <button class="read-more">
-              Read More <span class="arrow">→</span>
-            </button>
-          </Stack>
-          <Stack direction={"column"} spacing={3} className="BannerSevenList">
+              <p style={{fontWeight:600,fontSize:'16px'}}>
+                {item.title}
+              </p>
+              <p
+                className="paraOne"
+              >
+                {item.para}
+              </p>
+              <button class="read-more">
+                Read More <span class="arrow">→</span>
+              </button>
+            </Stack>
+          ))}
+          
+          {/* <Stack direction={"column"} spacing={3} className="BannerSevenList">
             <div className="BannerSevenImage">
               <img src="/Images/blog-3.jpg" alt="" className="BannerSevenImg" />
               <div className="BannerSevenImageDesc">
@@ -95,8 +110,19 @@ export default function BannerSeven() {
             <button class="read-more">
               Read More <span class="arrow">→</span>
             </button>
-          </Stack>
+          </Stack> */}
         </Stack>
+        <Stack
+                  direction="row"
+                  justifyContent="center"
+                  sx={{justifyContent:'center'}}
+                  alignItems={"center"}
+                  className="orderWrap"
+                >
+                  <Button variant="contained" size="small" sx={{bgcolor:'red'}} className="bot">
+                    <Link to="/#" style={{color:'white', fontSize:'10px'}}>View More</Link>
+                  </Button>
+                </Stack>
       </div>
     </>
   );

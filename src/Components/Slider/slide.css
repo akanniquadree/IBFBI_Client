@@ -1,5 +1,5 @@
 .slideWrap {
-    height: 600px;
+    height: 750px;
     overflow: hidden;
     position: relative;
 }
@@ -7,7 +7,7 @@
 .slide {
     opacity: 0;
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     transition: opacity 0.8s ease-in-out;
 }
@@ -35,10 +35,46 @@
 
 .orderCont {
     position: absolute;
-    left: 97px;
-    bottom: 120px;
-    width: 600px;
+    z-index: 10;
+    /* Ensure it appears above the image */
+    animation: slideIn 2s ease-out forwards;
+    font-size: 2rem;
+    /* Initial font size */
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    /* Center the container */
+    max-width: 90%;
+    /* Make it responsive for smaller devices */
+    animation: slideIn 1.5s ease-out forwards;
 }
+
+.orderCont h3 {
+    font-size: 2rem;
+    /* Adjust for responsiveness */
+    color: white;
+    margin: 10px 0;
+}
+
+.orderCont p {
+    font-size: 1rem;
+    color: white;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.orderWrap .bot {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
 
 .back {
     font-size: 70px !important;
@@ -89,4 +125,37 @@
 
 .elementor-shape-fill {
     fill: #E8E6E3;
+}
+
+
+
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translate(100vw, 100vh); /* Start from the bottom-right corner */
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%); /* End at the center */
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    .orderCont {
+        bottom: 10%;
+        padding: 15px;
+    }
+
+    .orderCont h3 {
+        font-size: 1.5rem;
+    }
+
+    .orderCont p {
+        font-size: 0.9rem;
+    }
+
+    .orderWrap .bot {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
 }

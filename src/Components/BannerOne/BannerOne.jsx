@@ -43,13 +43,7 @@ export default function BannerOne() {
             <li>To engage volunteers in community service that brings about community development.</li>
         </ul>
         <Divider sx={{margin:'50px 0 50px 0'}}/>
-        <div className="BannerOneUser">
-        <Avatar src="/Images/leadvolunteer-avatar.png" alt='leadvolunteer' />
-        <div className="BanneroneUserName">
-            <h6 style={{fontSize:'17px'}}>Popoola Olalekan Samuel</h6>
-            <p style={{fontSize:'13px', fontStyle:'italic'}}>-Lead Volunteer</p>
-        </div>
-        </div>
+      
       </div>
     </div>
   );
