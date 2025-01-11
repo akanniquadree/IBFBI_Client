@@ -2,59 +2,25 @@
 export const BannnerFiveData = (
     [
         {
-            title: "Taking Care of Children",
-            raise: 1204,
-            goal: 1509
+            title: "Volunteer",
+            img:'/Images/volunOne.jpg'
         },
         {
-            title: "Local Communities",
-            raise: 1204,
-            goal: 1509
+            title: "Volunteer",
+            img:'/Images/volunTwo.jpg'
         },
         {
-            title: "Family Planning",
-            raise: 1204,
-            goal: 1509
+            title: "Volunteer",
+            img:'/Images/volunThree.jpg'
         },
         {
-            title: "Operation Feed the Nation",
-            raise: 1204,
-            goal: 1509
+            title: "Volunteer",
+            img:'/Images/volunFour.jpg'
         },
         {
-            title: "Operation Feed the Nation",
-            raise: 1204,
-            goal: 1509
+            title: "Volunteer",
+            img:'/Images/volunfive.jpg'
         },
-        {
-            title: "Operation Feed the Nation",
-            raise: 1204,
-            goal: 1509
-        },
-        {
-            title: "Operation Feed the Nation",
-            raise: 1204,
-            goal: 1509
-        },
-        {
-            title: "Operation Feed the Nation",
-            raise: 1204,
-            goal: 1509
-        },
-        {
-            title: "Operation Feed the Nation",
-            raise: 1204,
-            goal: 1509
-        },
-        {
-            title: "Operation Feed the Nation",
-            raise: 1204,
-            goal: 1509
-        },
-        {
-            title: "Operation Feed the Nation",
-            raise: 1204,
-            goal: 1509
-        },
+        
     ]
 )

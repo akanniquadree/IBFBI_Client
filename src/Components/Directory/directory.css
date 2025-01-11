@@ -45,16 +45,48 @@
     text-decoration: none;
     transition: all 0.5s ease;
 }
-.directoryLink:hover{
+
+.directoryLink:hover {
     margin-left: 5px;
     text-decoration: underline;
     text-decoration-color: red;
     transition: all 0.5s ease;
 }
-.directoryName{
+
+.directoryName {
     z-index: 2;
     font-size: 42px;
     font-weight: 600;
     color: white;
     line-height: 1;
+}
+
+.blogDir {
+    font-size: 19px !important;
+}
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+    .blogDir {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: calc(350px - 50px);
+        font-size: 21px !important;
+    }
+    .directoryLoc p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: calc(200px - 50px);
+    }
+    .directoryWrap {
+        padding: 50px;
+    }
 }

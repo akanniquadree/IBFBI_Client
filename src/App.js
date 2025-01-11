@@ -9,6 +9,8 @@ import Volunteers from './Pages/Volunteers/Volunteers';
 import Image from './Pages/Image/Image';
 import Program from './Pages/Program/Program';
 import PartnerShip from './Pages/PartnerShip/PartnerShip';
+import Blog from './Pages/Blog/Blog';
+import SingleBlog from './Pages/SingleBlog/SingleBlog';
 
 function App() {
   const Layout = () =>{
@@ -81,6 +83,24 @@ function App() {
       children:[{
         path:'/partnership',
         element:<PartnerShip/>
+      }
+    ]
+    },
+    {
+      path:'/',
+      element:<Layout/>,
+      children:[{
+        path:'/blog',
+        element:<Blog/>
+      }
+    ]
+    },
+    {
+      path:'/',
+      element:<Layout/>,
+      children:[{
+        path:'/blog/:id',
+        element:<SingleBlog/>
       }
     ]
     },

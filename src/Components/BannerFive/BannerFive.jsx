@@ -14,7 +14,7 @@ export default function BannerFive() {
   const settings = {
     infinite: true,
     centerPadding: "60px",
-    slidesToShow: 5,
+    slidesToShow: 4,
     // autoplay: true,
     speed: 2000,
     pauseOnHover: true,
@@ -90,12 +90,12 @@ export default function BannerFive() {
               >
                 <img
                   className="bannerFiveImage"
-                  src="/Images/helpOne.jpg"
+                  src={itm.img}
                   alt="helpOne"
                 />
                 <div className="bannerFiveImageDesc">
                   <h5 className="bannerFiveImageTitle">{itm.title}</h5>
-                  <Stack gap={"5px"} direction={"column"} alignItems={"center"}>
+                  {/* <Stack gap={"5px"} direction={"column"} alignItems={"center"}>
                     <p
                       style={{
                         fontSize: "12px",
@@ -104,7 +104,7 @@ export default function BannerFive() {
                     >
                       Volunteer
                     </p>
-                  </Stack>
+                  </Stack> */}
                 </div>
               </div>
             </div>

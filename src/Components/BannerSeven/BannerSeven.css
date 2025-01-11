@@ -36,7 +36,7 @@ cursor: pointer;
     align-items: center;
 }
 .BannerSevenList{
-    flex: 1 1 calc(30%);
+    flex: 1 1 30%;
     margin-bottom: 20px;
 }
 .read-more {
@@ -80,3 +80,8 @@ cursor: pointer;
   max-height: calc(1.5em * 3);   /* Set max height to match 3 lines */
   width: 100%;   
   }
+
+
+.blogP:hover{
+color: red;
+}

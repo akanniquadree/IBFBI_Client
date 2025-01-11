@@ -31,43 +31,59 @@ export default function BannerSeven() {
           direction={{ sm: "column", md: "row" }}
           spacing={2}
           useFlexGap
-          sx={{ flexWrap: "wrap" }}
+          sx={{ flexWrap: "wrap" ,justifyContent:'space-between'}}
           className="BannerSevenCont"
         >
-          {BannerSevenData.map((item, index) => (
+          {BannerSevenData.slice(0,3).map((item, index) => (
             <Stack
               direction={"column"}
               spacing={3}
               className="BannerSevenList"
               key={index}
+              sx={{
+                flex: {
+                  xs: "1 1 100%", // For extra small devices (one per row)
+                  sm: "1 1 100%", // For small devices (still one per row)
+                  md: "1 1 calc(33.33% - 30px)", // For medium and larger devices (three per row)
+                },
+                maxWidth: {
+                  md: "calc(33.33% - 30px)", // Ensures max width matches the calculated flex
+                },
+              }}
             >
-              <div className="BannerSevenImage">
-                <img src={item.img} alt="" className="BannerSevenImg" />
-                <div className="BannerSevenImageDesc">
-                  <div className="BannerSevenImageTitle">
-                    <p style={{ fontSize: "11px", color: "red" }}>
-                      4 years ago
-                    </p>
-                  </div>
-                  <div className="BannerSevenImageTitleDesc">
-                    <p style={{ fontSize: "11px", color: "white" }}>Blog</p>
+              <Link to={`/blog/${index}`} style={{ color: "inherit" }}>
+                <div className="BannerSevenImage">
+                  <img src={item.img} alt="" className="BannerSevenImg" />
+                  <div className="BannerSevenImageDesc">
+                    <div className="BannerSevenImageTitle">
+                      <p style={{ fontSize: "11px", color: "red" }}>
+                        4 years ago
+                      </p>
+                    </div>
+                    <div className="BannerSevenImageTitleDesc">
+                      <p style={{ fontSize: "11px", color: "white" }}>Blog</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <p style={{fontWeight:600,fontSize:'16px'}}>
-                {item.title}
-              </p>
-              <p
-                className="paraOne"
-              >
-                {item.para}
-              </p>
+              </Link>
+              <Link to={`/blog/${item.id}`} style={{ color: "inherit" }}>
+                <p
+                  className="blogP"
+                  style={{ fontWeight: 600, fontSize: "16px" }}
+                >
+                  {item.title}
+                </p>
+              </Link>
+              <p className="paraOne">{item.para}</p>
               <button class="read-more">
-                Read More <span class="arrow">→</span>
+                <Link to={`/blog/${item.id}`} style={{ color: "inherit" }}>
+                  {" "}
+                  Read More <span class="arrow">→</span>
+                </Link>
               </button>
             </Stack>
           ))}
-          
+
           {/* <Stack direction={"column"} spacing={3} className="BannerSevenList">
             <div className="BannerSevenImage">
               <img src="/Images/blog-3.jpg" alt="" className="BannerSevenImg" />
@@ -113,16 +129,23 @@ export default function BannerSeven() {
           </Stack> */}
         </Stack>
         <Stack
-                  direction="row"
-                  justifyContent="center"
-                  sx={{justifyContent:'center'}}
-                  alignItems={"center"}
-                  className="orderWrap"
-                >
-                  <Button variant="contained" size="small" sx={{bgcolor:'red'}} className="bot">
-                    <Link to="/#" style={{color:'white', fontSize:'10px'}}>View More</Link>
-                  </Button>
-                </Stack>
+          direction="row"
+          justifyContent="center"
+          sx={{ justifyContent: "center" }}
+          alignItems={"center"}
+          className="orderWrap"
+        >
+          <Button
+            variant="contained"
+            size="small"
+            sx={{ bgcolor: "red" }}
+            className="bot"
+          >
+            <Link to="/blog" style={{ color: "white", fontSize: "10px" }}>
+              View More
+            </Link>
+          </Button>
+        </Stack>
       </div>
     </>
   );

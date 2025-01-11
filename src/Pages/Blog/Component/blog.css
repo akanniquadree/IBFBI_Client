@@ -1,0 +1,8 @@
+.blogCont{
+    background-color: #E8E6E3;
+}
+.blogWrap{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}

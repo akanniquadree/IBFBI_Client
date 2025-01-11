@@ -85,7 +85,7 @@ export default function BannerThree() {
               our humanitarian services to under served communities
             </p>
             <button class="read-more">
-            <Link to="/volunteers" style={{color: 'black'}}>Read More</Link> <span class="arrow">→</span>
+            <Link to="/partnership" style={{color: 'black'}}>Read More</Link> <span class="arrow">→</span>
             </button>
           </div>
           <div className="bannerThreeUpLeft">
@@ -131,10 +131,10 @@ export default function BannerThree() {
               >
                 <img
                   className="bannerThreeImage"
-                  src="/Images/helpOne.jpg"
+                  src={itm.img}
                   alt="helpOne"
                 />
-                <div className="bannerThreeImageDesc">
+                {/* <div className="bannerThreeImageDesc">
                   <h5 className="bannerThreeImageTitle">{itm.title}</h5>
                   <BorderLinearProgress variant="determinate" value={50} />
                   <Stack
@@ -171,7 +171,7 @@ export default function BannerThree() {
                       </p>
                     </Stack>
                   </Stack>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

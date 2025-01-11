@@ -1,5 +1,6 @@
 export const BannerSevenData = [
   {
+    id:2456,
     title: "Serving Humanity: A Heartwarming Community Service Experience",
     img:'/Images/blog-1.jpg',
     para: "On October 12th, 2024, a dedicated team of volunteers embarked on a pre-outreach community service project in Oje Community, Ibadan, Oyo State. This selfless initiative was aimed at making a positive impact on the lives of community members, particularly vulnerable groups such as elders, nursing mothers and teenage girls.",
@@ -15,6 +16,7 @@ export const BannerSevenData = [
       "This project is a testament to the impact that can be made when individuals come together to serve humanity.",
   },
   {
+    id:2446,
     title: "Ibadan Food Bank Initiative Celebrates Children’s day in Kosodo Community, Ibadan ",
     img:'/Images/blog-2.jpg',
     para: "Children they say are like flowers in a garden that should be lovingly nurtured and to commemorate and celebrate children’s day making it special for children.",
@@ -30,6 +32,22 @@ export const BannerSevenData = [
       "He drilled the children by asking questions and then the dancing and singing competition that he awarded cash gifts to the winners. He danced and the atmosphere was filled with fun fair .",
     paraSeven:
       "-Clothing:- Fulfilling our Foundation’s Sustainable Development Goals, preselected neatly used clothes and shoes were given to the children according to their sizes. This brought a huge smile to the faces of the children and also their parents. The volunteers were not left out in the fun as they danced with the children to the music after the event. The Joy, Excitement and fulfillment derived from service to humanity is a testament of our continued efforts to keep doing our best in ensuring a hunger free community.",
+  },
+  {
+    id:29056,
+    title: "Ibadan Food Bank Initiative Hosts Hunger Walk to Advocate for Food Security",
+    img:'/Images/blog-3.jpg',
+    para: "The Ibadan Food Bank Initiative, in collaboration with Bovas and other partner organizations, held a transformative Hunger Walk themed “Step Up to End Hunger” on Saturday, December 21, 2024. This impactful event aimed to raise awareness about food insecurity while fostering a collective action toward eradicating hunger in our communities.",
+    paraTwo:
+      "The Hunger Walk commenced at Iwo Road, with hundreds of volunteers, advocates and community members marching in solidarity united by the shared vision of a hunger-free society through, culminating at Gate.",
+    paraThree:
+      "As part of the initiative, a food distribution drive was held at the conclusion of the walk, where essential food items were provided to vulnerable individuals and families. Beneficiaries expressed their heartfelt gratitude for the initiative. “This food package means so much to my family this season,” said Mrs. Adeyemi, a beneficiary. Fatimah Yusuf also said “We are grateful to the Ibadan Food Bank and their partners for remembering us.”",
+    paraFour:
+      "When asked to share reflections about the event Tunde Adebayo said “Participating in the Hunger Walk has been an eye-opening experience,” Adejumo Risqat also said “It’s incredible to see how much we can achieve when we come together for a cause like this.",
+    paraFive:
+      'Another volunteer, Grace Oyelade, emphasized the importance of advocacy: “This walk is not just about food distribution, it’s about creating awareness and calling for action to end hunger in our communities.” \n Speaking at the event, Poopola Samuel the program lead for Ibadan Food Bank Initiative highlighted the importance of partnerships in combating hunger saying “Today’s event shows the power of collective action. We are grateful for the support of Bovas, our volunteers, and every individual and organization that contributed to making this initiative a success. Together, we can step up to end hunger and ensure food security for all.”',
+    paraSix:
+      "The Hunger Walk underscores the Ibadan Food Bank’s ongoing commitment to addressing food insecurity through advocacy, community engagement, and direct intervention in Ibadan.",
   },
   {
     title: "Ibadan Food Bank Initiative Hosts Hunger Walk to Advocate for Food Security",
