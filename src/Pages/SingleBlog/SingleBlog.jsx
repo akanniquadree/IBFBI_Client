@@ -13,7 +13,7 @@ export default function SingleBlog() {
     setBlog(data)
     return () => {
     }
-  }, [])
+  }, [id])
   if(blog){
   return (
     <>

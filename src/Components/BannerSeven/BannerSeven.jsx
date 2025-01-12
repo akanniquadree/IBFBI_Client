@@ -3,6 +3,7 @@ import "./BannerSeven.css";
 import { Button, Stack } from "@mui/material";
 import { BannerSevenData } from "./BannerSevenData";
 import { Link } from "react-router-dom";
+import { Comment } from "@mui/icons-material";
 
 export default function BannerSeven() {
   return (
@@ -31,10 +32,10 @@ export default function BannerSeven() {
           direction={{ sm: "column", md: "row" }}
           spacing={2}
           useFlexGap
-          sx={{ flexWrap: "wrap" ,justifyContent:'space-between'}}
+          sx={{ flexWrap: "wrap", justifyContent: "space-between" }}
           className="BannerSevenCont"
         >
-          {BannerSevenData.slice(0,3).map((item, index) => (
+          {BannerSevenData.slice(0, 3).map((item, index) => (
             <Stack
               direction={"column"}
               spacing={3}
@@ -61,7 +62,21 @@ export default function BannerSeven() {
                       </p>
                     </div>
                     <div className="BannerSevenImageTitleDesc">
-                      <p style={{ fontSize: "11px", color: "white" }}>Blog</p>
+                      <span
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          fontSize: "11px",
+                          color: "white",
+                        }}
+                      >
+                        
+                          <Comment
+                            size="tiny"
+                            sx={{ fontSize: "12px", marginRight: "3px" }}
+                          />{" "}
+                          2 comments
+                      </span>
                     </div>
                   </div>
                 </div>

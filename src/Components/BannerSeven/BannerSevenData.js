@@ -50,18 +50,17 @@ export const BannerSevenData = [
       "The Hunger Walk underscores the Ibadan Food Bank’s ongoing commitment to addressing food insecurity through advocacy, community engagement, and direct intervention in Ibadan.",
   },
   {
-    title: "Ibadan Food Bank Initiative Hosts Hunger Walk to Advocate for Food Security",
-    img:'/Images/blog-3.jpg',
-    para: "The Ibadan Food Bank Initiative, in collaboration with Bovas and other partner organizations, held a transformative Hunger Walk themed “Step Up to End Hunger” on Saturday, December 21, 2024. This impactful event aimed to raise awareness about food insecurity while fostering a collective action toward eradicating hunger in our communities.",
+    id:26783,
+    title: "IBADAN VOLUNTEERS HELD 9KM “WALK FOR HUNGER",
+    img:'/Images/blog-4.jpg',
+    para: "A weakened condition brought about by prolonged lack of food.",
     paraTwo:
-      "The Hunger Walk commenced at Iwo Road, with hundreds of volunteers, advocates and community members marching in solidarity united by the shared vision of a hunger-free society through, culminating at Gate.",
+      "According to the World Health Organization (WHO), over 10 per cent of the world population suffers from hunger. The rate of undernourished people has grown steadily over the past 2 years by 150 million people with as many as 828 million suffering from hunger in 2021.",
     paraThree:
-      "As part of the initiative, a food distribution drive was held at the conclusion of the walk, where essential food items were provided to vulnerable individuals and families. Beneficiaries expressed their heartfelt gratitude for the initiative. “This food package means so much to my family this season,” said Mrs. Adeyemi, a beneficiary. Fatimah Yusuf also said “We are grateful to the Ibadan Food Bank and their partners for remembering us.”",
+      "Ending world hunger, under nutrition and malnutrition is number 2 on the 10 point agenda of the United Nations before 2030; this goal is fast becoming unfeasible.”",
     paraFour:
-      "When asked to share reflections about the event Tunde Adebayo said “Participating in the Hunger Walk has been an eye-opening experience,” Adejumo Risqat also said “It’s incredible to see how much we can achieve when we come together for a cause like this.",
+      "The rapid rates of decline in food security owes to the outbreak of the COVID-19 virus and its adverse effects on the world economy. Nigeria is one of the countries with the highest hunger rate stated for about 12.7 per cent of the total population. It is high time we curb this disease that’s slowly taking ground in our world and the Ibadan Food Bank Initiative aims at doing that.",
     paraFive:
-      'Another volunteer, Grace Oyelade, emphasized the importance of advocacy: “This walk is not just about food distribution, it’s about creating awareness and calling for action to end hunger in our communities.” \n Speaking at the event, Poopola Samuel the program lead for Ibadan Food Bank Initiative highlighted the importance of partnerships in combating hunger saying “Today’s event shows the power of collective action. We are grateful for the support of Bovas, our volunteers, and every individual and organization that contributed to making this initiative a success. Together, we can step up to end hunger and ensure food security for all.”',
-    paraSix:
-      "The Hunger Walk underscores the Ibadan Food Bank’s ongoing commitment to addressing food insecurity through advocacy, community engagement, and direct intervention in Ibadan.",
+      'The IBADAN FOOD BANK Initiative in partnership with several NGOs across Ibadan held the “Ibadan Walk for Hunger” a 9km walk from Molete to Mokola. The walk aimed at advocating and raising funds for the hungry while putting an end to food loss and waste. It was also a celebration of humanitarians and volunteers doing amazing work round the globe.”',
   },
 ];
