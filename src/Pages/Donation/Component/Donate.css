@@ -1,0 +1,161 @@
+.DonateCont {
+    background-color: #E8E6E3;
+    position: relative;;
+}
+
+.DonateWrap {
+    padding: 30px;
+}
+
+.DonateHeading {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    margin-bottom: 50px;
+
+}
+
+.DonateHeadingList {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.DonateHeading::before {
+    content: '';
+    background-image: url(../../../../public/Images/birds.webp);
+    background-position: center right;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.8;
+    background-position: 100% 0;
+}
+
+.DonateHeadingList h6 {
+    font-size: 20px;
+
+}
+
+.DonateHeadingList p {
+    font-size: 15px;
+    color: #898581;
+}
+
+.DonateHeadingList ul {
+    list-style-type: square;
+    /* list-style-type: auto; */
+    padding: 0 40px;
+}
+
+.DonateHeadingList ul li {
+    font-size: 15px;
+    color: #898581;
+}
+
+.DonateHeadingList ul li b {
+    font-size: 17px;
+    color: black;
+}
+
+.DonateMethod {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+
+}
+
+.DonateMethodImage {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.DonateMethodImage h5 {
+    font-size: 30px;
+}
+
+.DonateMethodImage img {
+    object-fit: cover;
+    height: 500px;
+    width: 80%;
+}
+.DonateMoneyList{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 25px;
+    z-index: 2;
+}
+.DonateMoneyList h6{
+    font-size: 26px;
+}
+.DonateMoneyList p{
+    font-size: 15px;
+    color: #898581;
+}
+.DonateMoneyList ul{
+    list-style-type: square;
+    /* list-style-type: auto; */
+    padding: 0 40px;
+}
+.DonateMoneyList ul li {
+    font-size: 15px;
+    color: #898581;
+}
+
+.DonateMoneyList ul li span {
+    font-size: 17px;
+    color: black;
+    font-weight: 600;
+}
+
+
+.DonateCont:before {
+    content: '';
+    background-image: url(../../../../public/Images/wood.webp);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 40% auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.8;
+}
+.DonateMethodImage:nth-child(1)::before {
+    content: '';
+    background-image: url(../../../../public/Images/flower.webp);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 40% auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.1;
+}
+
+
+
+
+
+
+
+@media (max-width:768px) {
+    .DonateMethodImage img {
+        
+        width: 100%;
+    }
+}

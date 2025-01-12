@@ -11,6 +11,7 @@ import Program from './Pages/Program/Program';
 import PartnerShip from './Pages/PartnerShip/PartnerShip';
 import Blog from './Pages/Blog/Blog';
 import SingleBlog from './Pages/SingleBlog/SingleBlog';
+import Donation from './Pages/Donation/Donation';
 
 function App() {
   const Layout = () =>{
@@ -101,6 +102,15 @@ function App() {
       children:[{
         path:'/blog/:id',
         element:<SingleBlog/>
+      }
+    ]
+    },
+    {
+      path:'/',
+      element:<Layout/>,
+      children:[{
+        path:'/donation',
+        element:<Donation/>
       }
     ]
     },
