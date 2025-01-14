@@ -9,7 +9,7 @@ export const BannnerThreeData = (
         },
         {
             title: "Local Communities",
-            img:'/Images/donateOne.jpg',
+            img:'/Images/donate-one.jpg',
             raise: 1204,
             goal: 1509
         },
@@ -21,7 +21,7 @@ export const BannnerThreeData = (
         },
         {
             title: "Operation Feed the Nation",
-            img:'/Images/donateOne.jpg',
+            img:'/Images/donate-one.jpg',
             raise: 1204,
             goal: 1509
         },
@@ -33,7 +33,7 @@ export const BannnerThreeData = (
         },
         {
             title: "Operation Feed the Nation",
-            img:'/Images/donateOne.jpg',
+            img:'/Images/donate-one.jpg',
             raise: 1204,
             goal: 1509
         },
@@ -45,7 +45,7 @@ export const BannnerThreeData = (
         },
         {
             title: "Operation Feed the Nation",
-            img:'/Images/donateOne.jpg',
+            img:'/Images/donate-one.jpg',
             raise: 1204,
             goal: 1509
         },
@@ -57,7 +57,7 @@ export const BannnerThreeData = (
         },
         {
             title: "Operation Feed the Nation",
-            img:'/Images/donateOne.jpg',
+            img:'/Images/donate-one.jpg',
             raise: 1204,
             goal: 1509
         },

@@ -11,5 +11,9 @@
 .partCartImage > img{
     object-fit: cover;
     width: 100%;
-    height: 350px;
+    height: 400px;
+}
+.partIcon{
+    width: 100%;
+    justify-content: center;
 }

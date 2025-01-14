@@ -1,9 +1,38 @@
 import React from "react";
 import "./partner.css";
 import { Box, Button, Stack } from "@mui/material";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { PartnerData } from "./PartnerData";
 
 export default function PartnerSectionOne() {
+  const settings = {
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 4,
+    autoplay: true,
+    speed: 2000,
+    pauseOnHover: true,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768, // For tablets and smaller screens
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480, // For mobile devices
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
   return (
     <>
       <div className="volunCont">
@@ -45,13 +74,32 @@ export default function PartnerSectionOne() {
                   Food Bank.
                 </li>
               </ul>
-              <p style={{ color: "#7b7E86", textAlign: "justify" }}>For More Information<Button sx={{color:'red'}}><Link to='/contact' style={{color:'red', textDecoration:'none'}}>Contact Us</Link></Button></p>
+              <p style={{ color: "#7b7E86", textAlign: "justify" }}>
+                For More Information
+                <Button sx={{ color: "red" }}>
+                  <Link
+                    to="/contact"
+                    style={{ color: "red", textDecoration: "none" }}
+                  >
+                    Contact Us
+                  </Link>
+                </Button>
+              </p>
             </Stack>
             <Stack
               sx={{ flex: { sm: "1 1 100%", md: "1 1 calc(50% - 20px)" } }}
             >
               <div className="volunImage">
-                <img src="/Images/volunterOne.jpg" alt="volunteer" />
+                {/* <img src="/Images/partnerOne.jpg" alt="volunteer" /> */}
+                <video
+                  src="/Images/partnerVideo.mp4"
+                  alt="volunteer"
+                  controls
+                  autoPlay
+                  loop
+                  muted
+                  style={{ width: '100%', height: '400px' }}
+                />
               </div>
             </Stack>
           </Stack>
@@ -59,20 +107,20 @@ export default function PartnerSectionOne() {
             <h2>Categories of PartnerShip</h2>
           </div>
           <div className="bannerFourCont">
-            <Stack direction={"column"} spacing={4} className="bannerFourWrap">
-              <div className="bannerFourImage">
+            <Stack direction={"column"} spacing={4} className="bannerFourWrap" sx={{alignItems:'center'}}>
+              <div className="bannerFourImage partIcon">
                 <img
-                  src="/Images/icon-1.png"
+                  src="/Images/Partners/iconOne.png"
                   alt=""
                   className="bannerFourImg"
                 />
               </div>
               <h4 className="bannerFourTitle">Corporate partnership</h4>
             </Stack>
-            <Stack direction={"column"} spacing={4} className="bannerFourWrap">
-              <div className="bannerFourImage">
+            <Stack direction={"column"} spacing={4} className="bannerFourWrap" sx={{alignItems:'center'}}>
+              <div className="bannerFourImage partIcon">
                 <img
-                  src="/Images/icon-2.png"
+                  src="/Images/Partners/iconTwo.png"
                   alt=""
                   className="bannerFourImg"
                 />
@@ -81,10 +129,10 @@ export default function PartnerSectionOne() {
                 Entertainers/Celebrities Partnership
               </h4>
             </Stack>
-            <Stack direction={"column"} spacing={4} className="bannerFourWrap">
-              <div className="bannerFourImage">
+            <Stack direction={"column"} spacing={4} className="bannerFourWrap" sx={{alignItems:'center'}}>
+              <div className="bannerFourImage partIcon">
                 <img
-                  src="/Images/icon-3.png"
+                  src="/Images/Partners/iconThree.png"
                   alt=""
                   className="bannerFourImg"
                 />
@@ -92,10 +140,10 @@ export default function PartnerSectionOne() {
 
               <h4 className="bannerFourTitle">Non-Food partnership</h4>
             </Stack>
-            <Stack direction={"column"} spacing={4} className="bannerFourWrap">
-              <div className="bannerFourImage">
+            <Stack direction={"column"} spacing={4} className="bannerFourWrap" sx={{alignItems:'center'}}>
+              <div className="bannerFourImage partIcon">
                 <img
-                  src="/Images/icon-4.png"
+                  src="/Images/Partners/iconFour.png"
                   alt=""
                   className="bannerFourImg"
                 />
@@ -112,13 +160,19 @@ export default function PartnerSectionOne() {
             <Stack
               direction={{ sm: "column", md: "row" }}
               className="partCatList"
-              spacing={3}
+              spacing={{ sm: 4, md: 3 }}
             >
-              <Box className="partCartImage"sx={{flex:{sm:'1 1 100%',md:'1 1 50%'}}} >
-                <img src="/Images/helpOne.jpg" alt="Cat" />
+              <Box
+                className="partCartImage"
+                sx={{ flex: { sm: "1 1 100%", md: "1 1 50%" } }}
+              >
+                <img src="/Images/partnerOne.jpg" alt="Cat" />
               </Box>
 
-              <Stack direction={"column"} sx={{flex:{sm:'1 1 100%',md:'1 1 50%'}}}>
+              <Stack
+                direction={"column"}
+                sx={{ flex: { sm: "1 1 100%", md: "1 1 50%" } }}
+              >
                 <h4>Corporate Partnership</h4>
                 <div
                   style={{
@@ -173,13 +227,19 @@ export default function PartnerSectionOne() {
             <Stack
               direction={{ sm: "column", md: "row" }}
               className="partCatList"
-              spacing={3}
+              spacing={{ sm: 4, md: 3 }}
             >
-              <Box className="partCartImage" sx={{flex:{sm:'1 1 100%',md:'1 1 50%'}}}>
-                <img src="/Images/helpOne.jpg" alt="Cat" />
+              <Box
+                className="partCartImage"
+                sx={{ flex: { sm: "1 1 100%", md: "1 1 50%" } }}
+              >
+                <img src="/Images/partnerTwo.jpg" alt="Cat" />
               </Box>
 
-              <Stack direction={"column"} sx={{flex:{sm:'1 1 100%',md:'1 1 50%'}}}>
+              <Stack
+                direction={"column"}
+                sx={{ flex: { sm: "1 1 100%", md: "1 1 50%" } }}
+              >
                 <h4>Entertainers/Celebrities Partnership</h4>
                 <p style={{ color: "#7b7E86", textAlign: "justify" }}>
                   Nigeria entertainment industry is indeed big with a global
@@ -212,13 +272,19 @@ export default function PartnerSectionOne() {
             <Stack
               direction={{ sm: "column", md: "row" }}
               className="partCatList"
-              spacing={3}
+              spacing={{ sm: 4, md: 3 }}
             >
-              <Box className="partCartImage" sx={{flex:{sm:'1 1 100%',md:'1 1 50%'}}}>
-                <img src="/Images/helpOne.jpg" alt="Cat" />
+              <Box
+                className="partCartImage"
+                sx={{ flex: { sm: "1 1 100%", md: "1 1 50%" } }}
+              >
+                <img src="/Images/partnerThree.jpg" alt="Cat" />
               </Box>
 
-              <Stack direction={"column"} sx={{flex:{sm:'1 1 100%',md:'1 1 50%'}}}>
+              <Stack
+                direction={"column"}
+                sx={{ flex: { sm: "1 1 100%", md: "1 1 50%" } }}
+              >
                 <h4>Non-Food Partnership</h4>
                 <p style={{ color: "#7b7E86", textAlign: "justify" }}>
                   We meet the needs of our target beneficiaries beyond giving
@@ -258,13 +324,19 @@ export default function PartnerSectionOne() {
             <Stack
               direction={{ sm: "column", md: "row" }}
               className="partCatList"
-              spacing={3}
+              spacing={{ sm: 4, md: 3 }}
             >
-              <Box className="partCartImage" sx={{flex:{sm:'1 1 100%',md:'1 1 50%'}}}>
-                <img src="/Images/helpOne.jpg" alt="Cat" />
+              <Box
+                className="partCartImage"
+                sx={{ flex: { sm: "1 1 100%", md: "1 1 50%" } }}
+              >
+                <img src="/Images/partnerFive.jpg" alt="Cat" />
               </Box>
 
-              <Stack direction={"column"} sx={{flex:{sm:'1 1 100%',md:'1 1 50%'}}}>
+              <Stack
+                direction={"column"}
+                sx={{ flex: { sm: "1 1 100%", md: "1 1 50%" } }}
+              >
                 <h4>Government Partnership</h4>
                 <p style={{ color: "#7b7E86", textAlign: "justify" }}>
                   We are soliciting the partnership of the federal, state and
@@ -310,6 +382,40 @@ export default function PartnerSectionOne() {
               </Stack>
             </Stack>
           </Stack>
+          <h2 style={{    margin: "100px 0 30px 0"}}>Our Partners</h2>
+          <div
+        className="slider-container"
+        style={{
+          padding: "30px 50px",
+          width: "calc(100vw - 80px)",
+          backgroundColor: "#E8E6E3",
+        }}
+      >
+        <Slider {...settings}  style={{ gap: "30px", display: "flex" }}>
+          {PartnerData.map((itm, idx) => (
+            <div style={{ width: "auto" }} key={idx}>
+              <div
+                className="bannerFiveImageCont"
+                style={{
+                  padding: "0px !important",
+                  height: "250px",
+                  position: "relative",
+                }}
+              >
+                <img
+                  className="bannerFiveImage"
+                  src={itm.img}
+                  alt="helpOne"
+                  // style={{objectFit:'contain'}}
+                />
+                <div className="bannerFiveImageDesc">
+                  <h5 className="bannerFiveImageTitle">{itm.title}</h5>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
         </div>
       </div>
     </>
