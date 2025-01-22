@@ -5,7 +5,7 @@ import Directory from '../../Components/Directory/Directory'
 export default function Image() {
   return (
     <>
-    <Directory title={'Images'}/>
+    <Directory title={'Images'} />
     <ImagesList/>
     </>
   )

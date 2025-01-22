@@ -26,6 +26,14 @@ export const PartnerData = (
             title: "Partner",
             img:'/Images/Partners/LogoSix.jpg.png'
         },
+        {
+            title: "Partner",
+            img:'/Images/Partners/LogoSeven.jpg'
+        },
+        {
+            title: "Partner",
+            img:'/Images/Partners/LogoEight.jpg'
+        },
         
     ]
 )

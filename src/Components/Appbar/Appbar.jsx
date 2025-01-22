@@ -38,7 +38,8 @@ const navItems = [
   { name: "Volunteers", link: "/volunteers" },
   { name: "Programs", link: "/program" },
   { name: "Partnership", link: "/partnership" },
-  // "Blog",
+  { name: "Gallery", link: "/gallery" },
+  { name: "Blog", link: "/blog" },
   { name: "About", link: "/about" },
   { name: "Contact Us", link: "/contact" },
 ];

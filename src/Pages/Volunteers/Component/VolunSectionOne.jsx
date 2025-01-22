@@ -2,6 +2,7 @@ import React from "react";
 import "./VolunSectionOne.css";
 import { Stack } from "@mui/material";
 import { Favorite } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 export default function VolunSectionOne() {
   return (
@@ -58,7 +59,7 @@ export default function VolunSectionOne() {
               sx={{ flex: { sm: "1 1 100%", md: "1 1 calc(50% - 20px)" } }}
             >
               <div className="volunImage">
-                <img src="/Images/volunterOne.jpg" alt="volunteer" />
+                <img src="/Images/volunSix.jpg" alt="volunteer" />
               </div>
             </Stack>
           </Stack>
@@ -118,6 +119,9 @@ export default function VolunSectionOne() {
                   fulfilment, happiness and pride.
                 </p>
               </Stack>
+              <p className="progamDesc" >
+            To become a volunteer and make a positive impact, Click  <Link to="bit.ly/ibfbvolunteerreg" style={{color:'red'}}>Become a volunteer</Link>
+            </p>
             </Stack>
           </Stack>
         </div>
