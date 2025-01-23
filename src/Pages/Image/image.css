@@ -1,0 +1,102 @@
+.ImageContainer {
+    background-color: #E8E6E3;
+    padding: 30px;
+}
+
+.ImageWrapper {
+    margin-top: 30px;
+}
+
+.ImageListItems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.ImageListItemWrap {
+    flex: 1 1 calc(25% - 30px);
+    max-width: calc(25% - 30px);
+    box-sizing: border-box;
+
+}
+
+.ImageListItem {
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out !important;
+    /* Slower scaling effect */
+}
+
+.ImageListIcon {
+    transition: transform 0.5s ease-in-out !important;
+    /* Consistent duration for rotation */
+}
+
+.ImageListItem:hover {
+    transform: scale(1.1);
+    /* Smooth scaling effect */
+}
+
+.ImageListItem:hover .ImageListIcon {
+    transform: rotateX(162deg);
+    /* Smooth rotation effect */
+}
+
+.ImageListItem h4 {
+    font-size: 1em;
+    width: 100%;
+    display: -webkit-box;
+    /* Use a flexible box for multi-line ellipsis */
+    -webkit-box-orient: vertical;
+    /* Set the orientation of the box */
+    overflow: hidden;
+    /* Hide overflowing content */
+    text-overflow: ellipsis;
+    /* Add ellipsis (...) */
+    -webkit-line-clamp: 1;
+    cursor: pointer;
+    transition: color 0.5s ease-in-out;
+    /* Slow color change */
+}
+
+.ImageListItem:hover h4 {
+    color: red;
+    /* Smooth color transition */
+}
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+/* 3 items per row on medium screens */
+@media (max-width: 1024px) {
+    .ImageListItemWrap {
+        max-width:calc(33.33% - 30px);
+        flex: 1 1 calc(33.33% - 30px); /* 3 items per row */
+    }
+}
+
+/* 2 items per row on smaller screens */
+@media (max-width: 768px) {
+    .ImageListItemWrap {
+        max-width:calc(50% - 30px);
+        flex: 1 1 calc(50% - 30px); /* 2 items per row */
+    }
+}
+
+/* 1 item per row on very small screens */
+@media (max-width: 480px) {
+    .ImageListItemWrap {
+        max-width:calc(100% - 30px);
+        flex: 1 1 100%; /* 1 item per row */
+    }
+}

@@ -71,7 +71,7 @@ export default function PaginationList({
   //   Calculation of page slicing
   const startIndex = (page - 1) * itemPerPage;
   const stopIndex = startIndex + itemPerPage;
-  const currrentData = data.slice(startIndex, stopIndex);
+  const currrentData = data?.slice(startIndex, stopIndex);
 
   return (
     <>
@@ -81,13 +81,13 @@ export default function PaginationList({
         cols={cols}
         rowHeight={itemPerPage * itemHeight}
       >
-        {currrentData.map(
+        {currrentData?.map(
           (item, index) => renderItem(item, index, () => handleOpen(index)) // Pass the click handler to renderItem
         )}
       </ImageList>
       <div className="paginationCont">
         <Pagination
-          count={Math.ceil(data.length / itemPerPage)}
+          count={Math.ceil(data?.length / itemPerPage)}
           page={page}
           onChange={handlePageChange}
           showFirstButton

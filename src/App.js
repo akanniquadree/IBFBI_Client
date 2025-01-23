@@ -12,6 +12,7 @@ import PartnerShip from './Pages/PartnerShip/PartnerShip';
 import Blog from './Pages/Blog/Blog';
 import SingleBlog from './Pages/SingleBlog/SingleBlog';
 import Donation from './Pages/Donation/Donation';
+import ImageTemp from './Pages/Image/ImageTemp';
 
 function App() {
   const Layout = () =>{
@@ -120,6 +121,15 @@ function App() {
       children:[{
         path:'/gallery',
         element:<Image/>
+      }
+    ]
+    },
+    {
+      path:'/',
+      element:<Layout/>,
+      children:[{
+        path:'/gallery/:name',
+        element:<ImageTemp/>
       }
     ]
     },

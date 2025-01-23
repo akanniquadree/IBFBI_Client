@@ -1,0 +1,79 @@
+.singleBlogCont{
+    background-color: #E8E6E3;
+}
+.singleBlogWrap{
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.singleBlogLeft{
+    flex: 1 1 calc(70% - 30px);
+}
+.singleBlogImage{
+    width: 100%;
+    height: 600px;
+}
+.singleBlogImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.singleBlogRight{
+    flex: 1 1 calc(30% - 30px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.singleBlogRightRecentImage{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.BlogCommentAvatar{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+    .singleBlogWrap{
+        flex-direction: column;
+    }
+    .singleBlogLeft{
+        flex: 1 1 calc(100%);
+    }
+    .singleBlogRight{
+        flex: 1 1 calc(100%);
+        flex-direction: column-reverse;
+    }
+}
