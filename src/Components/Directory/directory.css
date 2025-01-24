@@ -29,6 +29,7 @@
     align-items: center;
     justify-content: center;
     gap: 2px;
+    padding: 0;
 }
 
 .directoryLoc {
@@ -37,6 +38,7 @@
     align-items: center;
     gap: 10px;
     z-index: 2;
+    text-align: center;
 }
 
 .directoryLink {
@@ -55,18 +57,26 @@
 
 .directoryName {
     z-index: 2;
-    font-size: 42px;
+    font-size: 45px;
     font-weight: 600;
     color: white;
     line-height: 1;
+    text-align: center;
 }
 
 .blogDir {
-    font-size: 19px !important;
+    font-size: 20px !important;
 }
 
 
-
+.directoryLink, 
+.directoryLoc p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    max-width: 100%; /* Ensure it doesn't exceed container width */
+}
 
 
 
@@ -80,11 +90,11 @@
         width: calc(350px - 50px);
         font-size: 21px !important;
     }
-    .directoryLoc p {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: calc(200px - 50px);
+    .directoryLoc p, .directoryLink {
+        width: auto; /* Allow the width to adjust naturally */
+    }
+    .directoryWrap {
+        padding: 0; /* Ensure no extra padding pushes content */
     }
     .directoryWrap {
         padding: 50px;

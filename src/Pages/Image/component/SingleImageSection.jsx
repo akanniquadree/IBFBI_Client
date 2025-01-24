@@ -13,8 +13,8 @@ import ImagesList from "../../../Components/ImageList/ImageList";
 export default function SingleImageSection({ image, data }) {
   return (
     <div className="singleBlogCont">
-      <div className="singleBlogWrap">
-        <div className="singleBlogLeft">
+      <div className="singleBlogWrap" style={{padding:'0'}}>
+        <div className="singleBlogLeft" >
          <ImagesList itemData={image ? image.images : []}/>
         </div>
         <div className="singleBlogRight" style={{padding:'30px'}}>

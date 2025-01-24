@@ -158,8 +158,8 @@ export const itemData = [
     ],
   },
   {
-    name: "Community Outreach",
-    link: "Community-Outreach",
+    name: "Pre-Outreach",
+    link: "Pre-Outreach",
     images: [
       {
         img: "/Images/Gallery/Community_Inspection/img (1).jpg",
@@ -310,8 +310,8 @@ export const itemData = [
     ],
   },
   {
-    name: "Pre-Outreach",
-    link: "Pre-Outreach",
+    name: "Community Outreach",
+    link: "Community-Outreach",
     images: [
       {
         img: "/Images/Gallery/Pre_outreach/img (1).jpg",
@@ -528,7 +528,7 @@ export const itemData = [
       {
         img: "/Images/Gallery/Pre_outreach/img (54).jpg",
         title: "Volunteer",
-      }
+      },
     ],
   },
   {

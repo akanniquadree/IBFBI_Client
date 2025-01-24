@@ -1,6 +1,6 @@
 import './App.css';
 import { Appbar } from './Components/Appbar/Appbar';
-import {createBrowserRouter, Outlet, RouterProvider} from 'react-router-dom'
+import {createBrowserRouter, Outlet, RouterProvider, useLocation} from 'react-router-dom'
 import Home from './Pages/Home/Home';
 import Footer from './Components/Footer/Footer';
 import Contact from './Pages/Contact/Contact';
@@ -13,12 +13,27 @@ import Blog from './Pages/Blog/Blog';
 import SingleBlog from './Pages/SingleBlog/SingleBlog';
 import Donation from './Pages/Donation/Donation';
 import ImageTemp from './Pages/Image/ImageTemp';
+import { useEffect } from 'react';
+
+
+
+
+const ScrollToTop = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location]);
+
+  return null;
+};
 
 function App() {
   const Layout = () =>{
     return(
       <>
       <Appbar/>
+      <ScrollToTop/>
       <Outlet/>
       <Footer/>
       </>
@@ -136,6 +151,7 @@ function App() {
 
   ])
   return (
+    
     <RouterProvider router={router}/>
   );
 }

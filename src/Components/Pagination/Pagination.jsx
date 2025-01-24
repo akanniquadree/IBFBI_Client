@@ -6,8 +6,9 @@ import {
   Box,
   IconButton,
   Modal,
+  Stack,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CloseIcon from "@mui/icons-material/Close";
@@ -25,7 +26,7 @@ const style = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  justifyContent:'center',
+  justifyContent: "center",
   position: "relative",
 };
 
@@ -40,6 +41,7 @@ export default function PaginationList({
   const [open, setOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const theme = useTheme();
+  const containerRef = useRef(null);
 
   // Media query breakpoints
   const isSmall = useMediaQuery(theme.breakpoints.down("sm")); // Small screens
@@ -72,6 +74,18 @@ export default function PaginationList({
   const startIndex = (page - 1) * itemPerPage;
   const stopIndex = startIndex + itemPerPage;
   const currrentData = data?.slice(startIndex, stopIndex);
+  
+
+  const handleScrollUp = (event, page) => {
+    // Scroll to the top of the container or page
+    if (containerRef.current) {
+      containerRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    console.log(`You clicked page: ${page}`);
+  };
 
   return (
     <>
@@ -80,21 +94,45 @@ export default function PaginationList({
         variant="quilted"
         cols={cols}
         rowHeight={itemPerPage * itemHeight}
+        ref={containerRef}
       >
         {currrentData?.map(
           (item, index) => renderItem(item, index, () => handleOpen(index)) // Pass the click handler to renderItem
         )}
       </ImageList>
-      <div className="paginationCont">
+      <Stack
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        margin={'30px 0 30px 0'}
+
+        sx={{
+          display: "flex",
+          flexWrap: "nowrap", // Prevent wrapping
+          overflowX: "auto", // Allow horizontal scrolling if needed
+          "& .MuiPagination-ul": {
+            display: "flex",
+            flexWrap: "nowrap", // Ensure the pagination buttons stay on one line
+          },
+          "&::-webkit-scrollbar": {
+            display: "none", // Optionally hide the scrollbar
+          },
+        }}
+      >
         <Pagination
           count={Math.ceil(data?.length / itemPerPage)}
           page={page}
-          onChange={handlePageChange}
+          onChange={(event, page) => {
+            handlePageChange(event, page);
+            handleScrollUp();
+          }}
           showFirstButton
           showLastButton
           color="error"
+          boundaryCount={1} // Adjust based on screen size
+          siblingCount={1} // Fewer siblings on smaller screens
         />
-      </div>
+      </Stack>
       {/* Modal for Image Preview */}
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
@@ -118,7 +156,12 @@ export default function PaginationList({
             display="flex"
             justifyContent="space-between"
             width="100%"
-            sx={{ position: "absolute", top:'50%', left:'50%', transform:'translate(-50%, -50%)' }}
+            sx={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+            }}
           >
             <IconButton onClick={handlePrev}>
               <ArrowBackIosNewIcon htmlColor="white" />

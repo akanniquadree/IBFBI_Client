@@ -30,8 +30,6 @@ export default function Directory({ title, blog, image }) {
             <Link to="/blog" className="directoryLink">
               Blog
             </Link>
-            <span style={{ color: "white", fontSize: "20px" }}>&gt; </span>
-            <p style={{ color: "red", fontSize: "15px" }}>{blog}</p>
           </div>
           <h4 className="directoryName blogDir">{blog}</h4>
         </div>
@@ -50,8 +48,6 @@ export default function Directory({ title, blog, image }) {
             <Link to="/gallery" className="directoryLink">
               Gallery
             </Link>
-            <span style={{ color: "white", fontSize: "20px" }}>&gt; </span>
-            <p style={{ color: "red", fontSize: "15px" }}>{image}</p>
           </div>
           <h4 className="directoryName blogDir">{image}</h4>
         </div>
