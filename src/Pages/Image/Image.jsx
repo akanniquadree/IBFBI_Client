@@ -12,7 +12,7 @@ export default function Image() {
     { name: "Ibadan Hunger Walk" , link:"Ibadan-Hunger-Walk"},
     { name: "Feed the Children", link:'Feed-the-Children' },
     { name: "Pre-Outreach", link:"Pre-Outreach" },
-    { name: "Ibadan Edu-Feed ", link:'Ibadan-Edu-Feed '},
+    { name: "Ibadan Edu-Feed ", link:'Ibadan-Edu-Feed'},
     { name: "Volunteers", link:"Volunteers" },
   ];
   return (
