@@ -8,7 +8,7 @@ import {
   Modal,
   Stack,
 } from "@mui/material";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CloseIcon from "@mui/icons-material/Close";
@@ -42,6 +42,7 @@ export default function PaginationList({
   const [currentIndex, setCurrentIndex] = useState(0);
   const theme = useTheme();
   const containerRef = useRef(null);
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   // Media query breakpoints
   const isSmall = useMediaQuery(theme.breakpoints.down("sm")); // Small screens
@@ -74,17 +75,17 @@ export default function PaginationList({
   const startIndex = (page - 1) * itemPerPage;
   const stopIndex = startIndex + itemPerPage;
   const currrentData = data?.slice(startIndex, stopIndex);
-  
 
   const handleScrollUp = (event, page) => {
     // Scroll to the top of the container or page
     if (containerRef.current) {
-      containerRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      containerRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-
-    console.log(`You clicked page: ${page}`);
   };
 
   return (
@@ -104,15 +105,20 @@ export default function PaginationList({
         direction="row"
         justifyContent="center"
         alignItems="center"
-        margin={'30px 0 30px 0'}
-
+        margin={"30px 0 30px 0"}
         sx={{
           display: "flex",
           flexWrap: "nowrap", // Prevent wrapping
-          overflowX: "auto", // Allow horizontal scrolling if needed
+          width: "100%", // Ensure it spans the full width of its container
+          maxWidth: "100%", // Prevent it from exceeding the container width
+          overflow: "scroll", // Hide anything that overflows
+          paddingLeft: "16px", // Add inner padding
+          paddingRight: "16px",
           "& .MuiPagination-ul": {
             display: "flex",
             flexWrap: "nowrap", // Ensure the pagination buttons stay on one line
+            justifyContent: "center", // Ensure alignment
+            overflow: "visible",
           },
           "&::-webkit-scrollbar": {
             display: "none", // Optionally hide the scrollbar
@@ -129,8 +135,8 @@ export default function PaginationList({
           showFirstButton
           showLastButton
           color="error"
-          boundaryCount={1} // Adjust based on screen size
-          siblingCount={1} // Fewer siblings on smaller screens
+          boundaryCount={isSmallScreen ? 0 : 2} // Adjust based on screen size
+          siblingCount={isSmallScreen ? 1 : 2} // Fewer siblings on smaller screens
         />
       </Stack>
       {/* Modal for Image Preview */}
