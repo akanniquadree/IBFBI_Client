@@ -291,7 +291,7 @@ transform: translate(-50%, -50%)
 
     .AboutSectionDetail {
         flex: 1 1 100%;
-        height: 450px;
+        height: auto;
     }
 
     .AboutSectionDetail::before {
@@ -305,13 +305,13 @@ transform: translate(-50%, -50%)
 
 @media (max-width: 1024px) and (min-width: 768px) {
     .AboutSectionOneImg {
-        flex: 1 1 100%;
+        flex: 1 1 50%;
         height: 500px;
     }
 
     .AboutSectionDetail {
-        flex: 1 1 100%;
-        /* height: 500px; */
+        flex: 1 1 50%;
+        height: auto;
     }
 
     .AboutSectionDetail::before {
