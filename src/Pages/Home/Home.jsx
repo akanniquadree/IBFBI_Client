@@ -21,11 +21,10 @@ export default function Home() {
       <BannerFour
       title={"title"}
         paraFour={
-          "We want to make a significant impact on young people's lives, making them happier, healthier and more successful individuals."
-        }
-        paraTwo={"We aim to ensure that future generations experience valuable moments in their lives by focusing on their rights in the field of health."}
-        paraThree={"We aim to create change in society and strengthen young people's access to their rights to health and education."}
-        paraOne={"Educational tools are designed to help children and young people raise awareness about health and education, improve themselves."}
+          "We want to make a significant impact on every lives, making them happier, healthier and more successful individuals."}
+        paraTwo={"We aim to ensure that beneficiaries experience valuable moments in their lives by focusing on their rights and need"}
+        paraThree={"We aim to create change in society and strengthen young people's access to making lasting impact in the society through eradicating hunger and malnutrition."}
+        paraOne={"Community Inspection help us identify vulnerable families or beneficiaries in need while ensuring the impact is achieved."}
       />
       <BannerFive />
       <BannerSix />

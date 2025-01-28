@@ -137,7 +137,7 @@ export default function Donate() {
                   </li>
                 </ul>
             <span style={{fontWeight:600}}>Drop-Off Location:</span>
-            <p>Bring your donations to our collection center in Lagos:</p>
+            <p>Bring your donations to our collection center:</p>
             <span>Admin and Operations Office: 5, Orelere Street, Ikolaba, Agodi, Ibadan, Oyo State.</span>
             <p>Your generosity makes a real difference. Together, let’s bring smiles and hope to countless lives. Thank you for your support!</p>
             <p>For inquiries or directions, <Link to='/contact' style={{color:'red', textDecoration:'underline'}}> contact us</Link></p>

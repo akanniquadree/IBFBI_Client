@@ -120,7 +120,7 @@ export default function VolunSectionOne() {
                 </p>
               </Stack>
               <p className="progamDesc" >
-            To become a volunteer and make a positive impact, Click  <Link to="bit.ly/ibfbvolunteerreg" style={{color:'red'}}>Become a volunteer</Link>
+            To become a volunteer and make a positive impact, Click  <Link to="https://bit.ly/ibfbvolunteerreg" style={{color:'red'}}>Become a volunteer</Link>
             </p>
             </Stack>
           </Stack>

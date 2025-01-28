@@ -22,11 +22,11 @@ export default function BannerOne() {
         <img src="/Images/cardOne.png" alt="Card" className="BannerOneImage" style={{
           transform: `skew(${skew.x}deg, ${skew.y}deg)`,
         }} />
-        <div className="BannerOneLeftDesc">
+        {/* <div className="BannerOneLeftDesc">
             <h2 style={{color:'white', fontSize:'80px', fontWeight:700}}>12k</h2>
             <p style={{color:'white', fontSize:'20px', textAlign:'right' }}>Children Lives</p>
             <p style={{color:'white', fontSize:'20px', textAlign:'right'}}>We touch</p>
-        </div>
+        </div> */}
       </div>
       <div className="BannerOneRight">
         <span className="visionDet" style={{marginBottom:'20px'}}><span className="vdet" style={{color:'red'}}>-</span>  Let's build tomorrow together</span>

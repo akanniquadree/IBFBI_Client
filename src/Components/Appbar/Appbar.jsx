@@ -16,7 +16,11 @@ import {
   Button,
   ListItemText,
   Drawer,
+  Menu,
+  MenuItem,
 } from "@mui/material";
+import {makeStyles} from '@mui/styles'
+import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./app.css";
 //handle the scrolling hide and show
@@ -35,20 +39,58 @@ function HideOnScroll(props) {
 const navItems = [
   { name: "Home", link: "/" },
   { name: "Donation", link: "/donation" },
-  { name: "Volunteers", link: "/volunteers" },
   { name: "Programs", link: "/program" },
-  { name: "Partnership", link: "/partnership" },
-  { name: "Gallery", link: "/gallery" },
   { name: "Blog", link: "/blog" },
+];
+const subNav = [
+  { name: "Volunteers", link: "/volunteers" },
+  { name: "Partners", link: "/partnership" },
+  { name: "Gallery", link: "/gallery" },
   { name: "About", link: "/about" },
   { name: "Contact Us", link: "/contact" },
 ];
-const drawerWidth = 240;
+const MobileNavItems = [
+  { name: "Home", link: "/" },
+  { name: "Donation", link: "/donation" },
+  { name: "Programs", link: "/program" },
+  { name: "Blog", link: "/blog" },
+  { name: "Volunteers", link: "/volunteers" },
+  { name: "Partners", link: "/partnership" },
+  { name: "Gallery", link: "/gallery" },
+  { name: "About", link: "/about" },
+  { name: "Contact Us", link: "/contact" },
+];
+const drawerWidth = 260;
+
+
+const useStyles = makeStyles({
+  popOverRoot: {
+    pointerEvents: "none",
+  },
+});
+
 
 export const Appbar = (props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  let currentlyHovering = false;
+  const styles = useStyles();
+
+  function handleHover() {
+    currentlyHovering = true;
+  }
+  function handleCloseHover() {
+    currentlyHovering = false;
+    setTimeout(() => {
+      if (!currentlyHovering) {
+        handleClose();
+      }
+    }, 50);
+  }
+
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -68,7 +110,12 @@ export const Appbar = (props) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -84,16 +131,31 @@ export const Appbar = (props) => {
         </Link>
       </Typography>
       <Divider />
-      <List sx={{display:'flex', flexDirection:'column', alignItems:'center'}}>
-        {navItems.map((item) => (
-          <ListItem key={item.name} disablePadding>
+      <List
+        sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}
+      >
+        {MobileNavItems.map((item) => (
+          <Link
+            to={`${item.link}`}key={item.name}
+            style={{ color: "red", width:'100%'}}
+          >
+            <ListItem  disablePadding>
+              <ListItemButton sx={{ }}>
+                <ListItemText
+                  primary={item.name}
+                  sx={{  }}
+                />
+              </ListItemButton>
+            </ListItem>
+          </Link>
+        ))}
+        {/* <ListItem disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <Link to={`${item.link}`} style={{ color: "red", textAlign:'center' }}>
-                <ListItemText primary={item.name} sx={{ textAlign: "center" }}/>
+              <Link to={''} style={{ color: "red", textAlign:'center' }}>
+                <ListItemText primary='Dash Board' sx={{ textAlign: "center" }}/>
               </Link>
             </ListItemButton>
-          </ListItem>
-        ))}
+          </ListItem> */}
       </List>
     </Box>
   );
@@ -113,7 +175,6 @@ export const Appbar = (props) => {
           }}
         >
           <Toolbar sx={{ flexDirection: { md: "row" } }}>
-            
             <Typography
               variant="h6"
               component="div"
@@ -134,7 +195,7 @@ export const Appbar = (props) => {
                 <span style={{ fontWeight: 700 }}>Ibadan Food Bank</span>
               </Link>
             </Typography>
-            <Box sx={{ display: { xs:'none',sm: "none", md: "block" } }}>
+            <Box sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
               {navItems.map((item, index) => (
                 <Button
                   key={index}
@@ -147,13 +208,27 @@ export const Appbar = (props) => {
                   </Link>
                 </Button>
               ))}
+              <Button
+                id="basic-button"
+                sx={{ color: "red !important" }}
+                className="butHover butActive"
+                aria-controls={open ? "basic-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+                // onClick={handleClick}
+                onMouseOver={handleClick}
+        onMouseLeave={handleCloseHover}
+                endIcon={<ExpandMore />}
+              >
+                About
+              </Button>
             </Box>
             <IconButton
               color="inherit"
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "block", md:'none' } }}
+              sx={{ mr: 2, display: { sm: "block", md: "none" } }}
             >
               <MenuIcon htmlColor="red" />
             </IconButton>
@@ -182,6 +257,27 @@ export const Appbar = (props) => {
         </Drawer>
       </nav>
       <Toolbar />
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        onMouseLeave={handleClose}
+        MenuListProps={{
+          onMouseEnter: handleHover,
+          onMouseLeave: handleCloseHover,
+          style: { pointerEvents: "auto" },
+        }}
+        PopoverClasses={{
+          root: styles.popOverRoot,
+        }}
+      >
+        {subNav.map((item, index) => (
+          <Link to={`${item.link}`} style={{ color: "red" }} key={index}>
+            <MenuItem onClick={handleClose}>{item.name}</MenuItem>
+          </Link>
+        ))}
+      </Menu>
     </>
   );
 };

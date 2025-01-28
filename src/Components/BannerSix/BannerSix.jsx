@@ -37,14 +37,15 @@ export default function BannerSix() {
               className="visionDownLeftDes"
               style={{ marginTop: "20px", color: "white" }}
             >
-              Volunteer in the campaign, a year-long journey to educate children
-              in Africa.
+              With your Donations, a Family can smile again.
             </h4>
           </div>
           <div className="bannerTwoUpLeft">
             <p style={{ color: "white" }}>
-              Join us in the 100 campaign, a year-long journey to bring 100
-              children home to 100 families.
+              Join us in reaching out to thousands of vulnerable families by
+              providing essential relief items such as food, clothing, and
+              shelter. Together, we can bring hope and support to those in
+              need—your kindness can make a world of difference!
             </p>
             <Stack
               sx={{ marginTop: "15px" }}
@@ -65,7 +66,6 @@ export default function BannerSix() {
                   Get Involved
                 </Link>
               </Button>
-              
             </Stack>
           </div>
         </div>

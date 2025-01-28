@@ -17,7 +17,7 @@ export default function Image() {
   ];
   return (
     <>
-      <Directory title={"Images"} />
+      <Directory title={"Gallery"} />
       {/* <ImagesList/> */}
       <div className="ImageContainer">
         <div className="ImageWrapper">
