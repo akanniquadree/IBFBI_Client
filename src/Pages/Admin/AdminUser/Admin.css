@@ -1,0 +1,9 @@
+.AdminContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.AdminContainer h4{
+    font-size: 25px;
+}

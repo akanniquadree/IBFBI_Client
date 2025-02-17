@@ -13,7 +13,15 @@ import Blog from './Pages/Blog/Blog';
 import SingleBlog from './Pages/SingleBlog/SingleBlog';
 import Donation from './Pages/Donation/Donation';
 import ImageTemp from './Pages/Image/ImageTemp';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import SignIn from './Pages/SignIn/SignIn';
+import AdminHome from './Pages/Admin/AdminHome/AdminHome';
+import AdminUser from './Pages/Admin/AdminUser/AdminUser';
+import AdminProgram from './Pages/Admin/AdminProgram/AdminProgram';
+import AdminBlog from './Pages/Admin/AdminBlog/AdminBlog';
+import GalleryCat from './Pages/Admin/GalleryCat/GalleryCat';
+import AdminGallery from './Pages/Admin/AdminGallery/AdminGallery';
+import { AuthContext } from './Pages/Context/UserContext';
 
 
 
@@ -29,6 +37,13 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  const {dispatch} = useContext(AuthContext)
+  useEffect(()=>{
+    const user = JSON.parse(localStorage.getItem('user'))
+    if(user){
+      dispatch({type:'LOGIN_SUCCESS', payload:user})
+    }
+  },[])
   const Layout = () =>{
     return(
       <>
@@ -148,7 +163,35 @@ function App() {
       }
     ]
     },
-
+    {
+      path:'/login',
+      element:<SignIn/>,
+    },
+    {
+      path:'/admin',
+      element:<AdminHome/>,
+    },
+    {
+      path:'/admin/user',
+      element:<AdminUser/>,
+    },
+    {
+      path:'/admin/program',
+      element:<AdminProgram/>,
+    },
+    {
+      path:'/admin/blog',
+      element:<AdminBlog/>,
+    },
+    {
+      path:'/admin/gallery-category',
+      element:<GalleryCat/>,
+    },
+    {
+      path:'/admin/gallery',
+      element:<AdminGallery/>,
+    },
+    
   ])
   return (
     
