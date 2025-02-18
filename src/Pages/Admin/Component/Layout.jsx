@@ -9,6 +9,8 @@ import { AppProvider } from "@toolpad/core/AppProvider";
 import { DashboardLayout } from "@toolpad/core/DashboardLayout";
 import { useDemoRouter } from "@toolpad/core/internal";
 import { Collections, Event, Group, Handshake, RssFeed } from "@mui/icons-material";
+import { useContext } from "react";
+import { AuthContext } from "../../Context/UserContext";
 
 const NAVIGATION = [
   {
@@ -20,6 +22,7 @@ const NAVIGATION = [
     segment: "admin/user",
     title: "Admin",
     icon: <Group />,
+    allowedRole: process.env.REACT_APP_ARC
   },
   {
     segment: "admin/program",
@@ -119,11 +122,12 @@ DemoPageContent.propTypes = {
 
 function Layout({children}) {
   const router = useDemoRouter("/dashboard");
-
+  const {user} = useContext(AuthContext)
   return (
     // preview-start
     <AppProvider
-      navigation={NAVIGATION}
+      // navigation={NAVIGATION.filter((item)=>{item.allowedRole !== user.role})}
+      navigation={NAVIGATION.filter((item) =>  !item.allowedRole || item.allowedRole.includes(user?.role))}
       branding={{
         logo: <img src="/Images/logo.png" alt="Ibfbi logo" />,
         title: <span style={{ color: "red" }}>IBFBI</span>,

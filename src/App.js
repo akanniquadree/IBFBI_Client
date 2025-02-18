@@ -22,6 +22,7 @@ import AdminBlog from './Pages/Admin/AdminBlog/AdminBlog';
 import GalleryCat from './Pages/Admin/GalleryCat/GalleryCat';
 import AdminGallery from './Pages/Admin/AdminGallery/AdminGallery';
 import { AuthContext } from './Pages/Context/UserContext';
+import { Navigate } from "react-router-dom";
 
 
 
@@ -35,11 +36,16 @@ const ScrollToTop = () => {
 
   return null;
 };
+const ProtectedRoute = ({ element, allowedRoles, userRole }) => {
+  // Check if userRole is in the allowedRoles array
+  return allowedRoles.includes(userRole) ? element : <Navigate to="/login" />;
+};
 
 function App() {
-  const {dispatch} = useContext(AuthContext)
+  const { dispatch} = useContext(AuthContext)
+  const user = JSON.parse(localStorage.getItem('user'))
   useEffect(()=>{
-    const user = JSON.parse(localStorage.getItem('user'))
+    
     if(user){
       dispatch({type:'LOGIN_SUCCESS', payload:user})
     }
@@ -173,7 +179,7 @@ function App() {
     },
     {
       path:'/admin/user',
-      element:<AdminUser/>,
+      element:<ProtectedRoute element={<AdminUser />} allowedRoles={[process.env.REACT_APP_ARC]} userRole={user.role} />,
     },
     {
       path:'/admin/program',

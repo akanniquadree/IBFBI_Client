@@ -32,7 +32,7 @@ export default function SignIn() {
       e.preventDefault();
       const { data } = await axios.post(
         `${process.env.REACT_APP_SERVER}/admin-login`,
-        parameter
+        parameter,{withCredentials:true}
       );
       if (data) {
         localStorage.setItem("access-token", data.accessToken);
